@@ -31,37 +31,45 @@
 // ];
 // console.log(dataWibu);
 
+
+// variabel dataProject nya
 let dataProject = []
 
-
+// fungsi dari add projectnya
 function addProject(event) {
     event.preventDefault();
 
+    // variabel dari data add projectnya
     let title = document.getElementById("input-project-title").value;
     let stardate = document.getElementById("input-startdate").value;
     let enddate = document.getElementById("input-enddate").value;
     let description = document.getElementById("input-description").value;
     let image = document.getElementById("input-project-image").files;
-
-
+    
+    // variabel untuk menghitung selisih waktu post nya
     let mulai = new Date(stardate);
     let akhir = new Date(enddate);
     let selisih = akhir.getTime() - mulai.getTime();
     let durasi = Math.ceil(selisih / (1000 * 3600 * 24 * 30));
-
+    
+    // variabel untuk data pada iconnya
     const nodejsIcon = '<i class="fa-brands fa-node-js"></i>';
     const reactjsIcon = '<i class="fa-brands fa-react"></i>';
     const nextjsIcon = '<i class="fa-brands fa-android"></i>';
     const typescriptIcon = '<i class="fa-brands fa-java"></i>';
-
+    
+    // variabel untuk dapatkan value dan data dari chekbox nya
     let cbnodejs = document.getElementById("nodejs").checked ? nodejsIcon : "";
     let cbReactjs = document.getElementById("reactjs").checked ? reactjsIcon : "";
     let cbnextjs = document.getElementById("nextjs").checked ? nextjsIcon : "";
     let cbtypescript = document.getElementById("typescript").checked ? typescriptIcon : "";
-
+    
+    // untuk membuat url dari image nya
     image = URL.createObjectURL(image[0]);
     console.log(image);
 
+
+    // untuk membuat object dari data projectnya
     let project = {
         title,
         stardate,
@@ -83,8 +91,22 @@ function addProject(event) {
 
     renderProject();
 
+
+    // ini get untuk mengosongkan data setelah kita input/submit data
+    document.getElementById("input-project-title").value = "";
+    document.getElementById("input-startdate").value = "";
+    document.getElementById("input-enddate").value = "";
+    document.getElementById("input-description").value = "";
+    document.getElementById("nodejs").checked = false;
+    document.getElementById("nextjs").checked = false;
+    document.getElementById("reactjs").checked = false;
+    document.getElementById("typescript").checked = false;
+    document.getElementById("input-project-image").value = "";
+
 }
 
+
+// fungsi untuk menampilkan data add project kita ke halaman html/html
 function renderProject() {
     document.getElementById("mockup").innerHTML = "";
 
