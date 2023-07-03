@@ -111,10 +111,9 @@ nav {
     background-color: lightgray;
     display: flex;
     align-items: center;
+    border: 2px solid grey;
 }
-nav:hover{
-    border: 3px solid grey;
-}
+
 nav ul {
     display: flex;
     list-style-type: none;

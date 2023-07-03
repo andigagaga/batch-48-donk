@@ -156,7 +156,7 @@
    background-color: orangered;
    transform: scale(1.1);
 }
-/* project list */
+/* project list nya nih */
 .project-list1{
    
     margin-top: 5px;
@@ -177,7 +177,7 @@
     background-color: yellow;
 }
 
-/* project-list-nyaaaaa-nihhhh */
+
 
 .project-list1 h1{
     display: flex;
@@ -235,6 +235,10 @@
 .project-items-judul{
     margin-top: 5px;
 }
+.project-items-post{
+    color: blue;
+}
+
 /* .project-items-judul button{
     display: flex;
     justify-content: right;

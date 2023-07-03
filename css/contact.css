@@ -53,12 +53,12 @@ button {
     margin-left: 80%;
 }
 input:hover {
-    background-color: chocolate;
+    
     box-shadow: 0px 0px 10px;
     transform: scale(1.1);
 }
 select:hover {
-    background-color: chocolate;
+   
     box-shadow: 0px 0px 10px;
     transform: scale(1.1);
 }

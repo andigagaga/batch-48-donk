@@ -34,6 +34,7 @@
 
 // variabel dataProject nya
 let dataProject = []
+alert("gw ganteng tauu")
 
 // fungsi dari add projectnya
 function addProject(event) {
@@ -81,7 +82,7 @@ function addProject(event) {
         cbtypescript,
         description,
         image,
-        postAt: "12 may 2023",        
+        postAt: new Date(),        
     }
     // 
     
@@ -125,8 +126,8 @@ function renderProject() {
                     </div>
                     <div class="project-items-judul">
                         <h2>${dataProject[index].title}</h2>
-                        
-                        <h5 class="project-items-duration">durasi : ${dataProject[index].durasi}</h5>
+                        <h6>${dataProject[index].postAt}</h6>
+                        <h5 class="project-items-duration">durasi : ${dataProject[index].durasi}hari</h5>
                     </div>
                     <div class="project-list-paraf">
                         <p>${dataProject[index].description}</p>
@@ -150,6 +151,30 @@ function renderProject() {
        
     `;
     }
+    
+}
+
+// untuk menghitung jrak waktu pada project
+
+function getFullTime(time) {
+    let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
+    let minggu = ["week 1", "week 2", "week 3", "week 4"];
+    let tanggal = time.getDate();
+    let indexBulan = time.getMonth();
+    let tahun = time.getFullYear();
+
+    if (tanggal <= 7) {
+        minggu = minggu[0];
+      } else if (tanggal <= 14) {
+        minggu = minggu[1];
+      } else if (tanggal <= 21) {
+        minggu = minggu[2];
+      } else if (tanggal <= 31) {
+        minggu = minggu[3];
+      }
+
+      return `date ${tanggal} , ${minggu} , ${bulan[indexBulan]} , ${tahun}`;
+      console.log(time);
 }
 
 
