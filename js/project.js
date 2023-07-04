@@ -4,6 +4,10 @@
 // console.log(namaSiswa[0]);
 // console.log(namaSiswa[1])
 
+// let arrayName = ["situs", "web","wibu"]
+// console.log(arrayName)
+// console.log(arrayName[2])
+
 // let calonSiswa = ["bayu", "agus", "asep"];
 // console.log(calonSiswa);
 // console.log(calonSiswa[2])
@@ -23,13 +27,21 @@
 // console.log(personal2);
 // console.log(personal1.alamat);
 // console.log(personal2.umur);
+// let dokter = {
+//     name: "babi",
+//     alamat: "joko tingir",
+//     umur: 126,
+// }
+// console.log(dokter)
+// console.log(dokter.alamat)
+// console.log(dokter.umur)
 
 // array of object
 // let dataWibu = [
 //     {name: "andi", alamat: "padang"},
 //     {name: "bagong", alamat: "jambi"}
 // ];
-// console.log(dataWibu);
+// console.log(dataWibu[0]);
 
 
 // variabel dataProject nya
@@ -51,7 +63,10 @@ function addProject(event) {
     let mulai = new Date(stardate);
     let akhir = new Date(enddate);
     let selisih = akhir.getTime() - mulai.getTime();
-    let durasi = Math.ceil(selisih / (1000 * 3600 * 24 * 30));
+    let durasi = Math.ceil(selisih / (1000 * 60 * 60 * 24));
+    console.log(selisih)
+    
+    
     
     // variabel untuk data pada iconnya
     const nodejsIcon = '<i class="fa-brands fa-node-js"></i>';
@@ -110,7 +125,8 @@ function addProject(event) {
 // fungsi untuk menampilkan data add project kita ke halaman html/html
 function renderProject() {
     document.getElementById("mockup").innerHTML = "";
-
+    
+    // looping
     for (let index = 0; index < dataProject.length; index++) {
         document.getElementById("mockup").innerHTML += `
         
@@ -127,7 +143,7 @@ function renderProject() {
                     <div class="project-items-judul">
                         <h2>${dataProject[index].title}</h2>
                         <h6>${dataProject[index].postAt}</h6>
-                        <h5 class="project-items-duration">durasi : ${dataProject[index].durasi}hari</h5>
+                        <h5 class="project-items-duration">durasi : ${dataProject[index].durasi}</h5>
                     </div>
                     <div class="project-list-paraf">
                         <p>${dataProject[index].description}</p>
@@ -156,25 +172,25 @@ function renderProject() {
 
 // untuk menghitung jrak waktu pada project
 
-function getFullTime(time) {
-    let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
-    let minggu = ["week 1", "week 2", "week 3", "week 4"];
-    let tanggal = time.getDate();
-    let indexBulan = time.getMonth();
-    let tahun = time.getFullYear();
+// function getFullTime(time) {
+//     let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
+//     let minggu = ["week 1", "week 2", "week 3", "week 4"];
+//     let tanggal = time.getDate();
+//     let indexBulan = time.getMonth();
+//     let tahun = time.getFullYear();
 
-    if (tanggal <= 7) {
-        minggu = minggu[0];
-      } else if (tanggal <= 14) {
-        minggu = minggu[1];
-      } else if (tanggal <= 21) {
-        minggu = minggu[2];
-      } else if (tanggal <= 31) {
-        minggu = minggu[3];
-      }
+//     if (tanggal <= 7) {
+//         minggu = minggu[0];
+//       } else if (tanggal <= 14) {
+//         minggu = minggu[1];
+//       } else if (tanggal <= 21) {
+//         minggu = minggu[2];
+//       } else if (tanggal <= 31) {
+//         minggu = minggu[3];
+//       }
 
-      return `date ${tanggal} , ${minggu} , ${bulan[indexBulan]} , ${tahun}`;
-      console.log(time);
-}
+//       return `date ${tanggal} , ${minggu} , ${bulan[indexBulan]} , ${tahun}`;
+//       console.log(time);
 
+//     }
 
