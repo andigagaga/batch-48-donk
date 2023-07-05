@@ -44,7 +44,7 @@
 // console.log(dataWibu[0]);
 
 
-// variabel dataProject nya
+// variabel dataProject nya array of object
 let dataProject = []
 alert("gw ganteng tauu")
 
@@ -58,13 +58,75 @@ function addProject(event) {
     let enddate = document.getElementById("input-enddate").value;
     let description = document.getElementById("input-description").value;
     let image = document.getElementById("input-project-image").files;
+
+    let start = new Date(stardate)
+    let end = new Date(enddate)
+
+    let timeDistance = end - start
+    console.log(timeDistance)
+
+    let distanceSecond = Math.floor(timeDistance / 1000)
+    let distanceMinutes = Math.floor(distanceSecond / 60)
+    let distanceHours = Math.floor(distanceMinutes / 60)
+    let distanceDays = Math.floor(distanceHours / 24)
+    let distanceWeeks = Math.floor(distanceDays / 7)
+    let distanceMonths = Math.floor(distanceWeeks / 4)
+    let distanceYears = Math.floor(distanceMonths / 12)
+
+    let distance = "";
+
+    // if (distanceSecond >= 60 ) {
+    //     distance=  `${distanceMinutes} menit`
+    // } else if (distanceMinutes  >= 60) {
+    //     distance= `${distanceHours} jam`
+    if (distanceDays < 7) {
+        distance = distanceDays + "hari";
+    } else if (distanceWeeks < 4) {
+        distance = distanceWeeks + "minggu";
+    } else if (distanceMonths < 12) {
+        distance = distanceMonths + "bulan";
+    } else  {
+        distance = distanceYears + "tahun";
+    }
+    
+    // let start = new Date(stardate)
+    // let end = new Date(enddate)
+    // let selisih = start - end
+    // let days = selisih / (1000 * 60 * 60 * 24)
+    // let weeks = Math.floor(days/7)
+    // let month = Math.floor(weeks/4)
+    // let  year= Math.floor(month/12)
+    // let durasi = ""
+
+    // if(days > 0) {
+    //     durasi = days + "hati"
+    // }else if(weeks > 0) {
+    //     durasi = weeks + "minggu"
+    // }else if(month > 0) {
+    //     durasi = month + "bulan"
+    // }else if(year > 0) {
+    //     durasi = year + "tahun"
+    // }
+    // else {
+    //     distance= `${distanceMonth} + "bulan"`
+    // };
+
+    
+
+    
+
+
     
     // variabel untuk menghitung selisih waktu post nya
-    let mulai = new Date(stardate);
-    let akhir = new Date(enddate);
-    let selisih = akhir.getTime() - mulai.getTime();
-    let durasi = Math.ceil(selisih / (1000 * 60 * 60 * 24));
-    console.log(selisih)
+    // let mulai = new Date(stardate);
+    // let akhir = new Date(enddate);
+    // let selisih = akhir.getTime() - mulai.getTime();
+    // let durasi1 = Math.floor(selisih / (1000 * 60 * 60 * 24));
+    // let durasi2 = Math.floor(selisih / (1000 * 60 * 60 * 24 *30));
+    // console.log(selisih)
+    // if (durasi1 >= 30) {
+    //     return `${durasi2} Bulan`
+    // };
     
     
     
@@ -88,9 +150,7 @@ function addProject(event) {
     // untuk membuat object dari data projectnya
     let project = {
         title,
-        stardate,
-        enddate,
-        durasi,
+        distance,
         cbnodejs,
         cbReactjs,
         cbnextjs,
@@ -129,7 +189,7 @@ function renderProject() {
     // looping
     for (let index = 0; index < dataProject.length; index++) {
         document.getElementById("mockup").innerHTML += `
-        
+            
             <div class="project-items1" id="project-items1">
                 <div class="project-items-container">
                     <div class="project-items-image">
@@ -142,8 +202,8 @@ function renderProject() {
                     </div>
                     <div class="project-items-judul">
                         <h2>${dataProject[index].title}</h2>
-                        <h6>${dataProject[index].postAt}</h6>
-                        <h5 class="project-items-duration">durasi : ${dataProject[index].durasi}</h5>
+                        <h6>${getFullTime(dataProject[index].postAt)}</h6>
+                        <h5 class="project-items-duration">durasi : ${dataProject[index].distance}</h5>
                     </div>
                     <div class="project-list-paraf">
                         <p>${dataProject[index].description}</p>
@@ -172,25 +232,33 @@ function renderProject() {
 
 // untuk menghitung jrak waktu pada project
 
-// function getFullTime(time) {
-//     let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
-//     let minggu = ["week 1", "week 2", "week 3", "week 4"];
-//     let tanggal = time.getDate();
-//     let indexBulan = time.getMonth();
-//     let tahun = time.getFullYear();
+function getFullTime(time) {
+    let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
+    // let minggu = ["week 1", "week 2", "week 3", "week 4"];
+    let tanggal = time.getDate();
+    let indexBulan = time.getMonth();
+    let tahun = time.getFullYear();
+    let jam = time.getHours();
+    let menit = time.getMinutes();
 
-//     if (tanggal <= 7) {
-//         minggu = minggu[0];
-//       } else if (tanggal <= 14) {
-//         minggu = minggu[1];
-//       } else if (tanggal <= 21) {
-//         minggu = minggu[2];
-//       } else if (tanggal <= 31) {
-//         minggu = minggu[3];
-//       }
+    if (jam < 10) {
+        jam = "0" + jam
+    }
+    if (menit < 10) {
+        menit = "0" + menit
+    }
 
-//       return `date ${tanggal} , ${minggu} , ${bulan[indexBulan]} , ${tahun}`;
-//       console.log(time);
+    // if (tanggal <= 7) {
+    //     minggu = minggu[0];
+    //   } else if (tanggal <= 14) {
+    //     minggu = minggu[1];
+    //   } else if (tanggal <= 21) {
+    //     minggu = minggu[2];
+    //   } else if (tanggal <= 31) {
+    //     minggu = minggu[3];
+    //   }
 
-//     }
+      return `${tanggal} ${bulan[indexBulan]}  ${tahun} ${jam}:${menit} WIB`;
+    //   console.log(time);
+ }
 

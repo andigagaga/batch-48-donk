@@ -275,6 +275,7 @@
 .button-project .button-project-edit{
     width: 50%;
     display: flex;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 35px;
     margin-right: 10px;
@@ -285,6 +286,7 @@
 .button-project .button-project-delete{
     width: 50%;
     display: flex;
+    justify-content: center;
     margin-top: 20px;
     margin-bottom: 35px;
     margin-right: 10px;
