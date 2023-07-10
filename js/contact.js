@@ -1,4 +1,4 @@
-alert("isi biar kita bisa call ing an")
+// alert("isi biar kita bisa call ing an")
 
 // function dan variabel dari data form contact
 function submitData() {

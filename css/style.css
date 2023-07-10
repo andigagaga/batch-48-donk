@@ -269,6 +269,9 @@ h5:hover{
        
        
       }
+      form div h1{
+        margin-left: 80px;
+      }
       form #input-subject{
         width: 105%;
         height: 100%;
@@ -289,19 +292,22 @@ h5:hover{
       .date-kiri{
         flex: 50%;
       } */
-      .input-date{
-        width: 30%;
-        text-align: left;
+      /* form {
         background-color: red;
-      }
-      /* .date-kiri{
-        flex: 50%;
-        width: 100%;
-      }
-      .date-kanan{
-        flex: 50%;
-        width: 100%;
+       
       } */
+      .project-form{
+       
+        margin-top: 80px;
+      }
+      form h1{
+        margin-right: 80px;
+      }
+      .input-button-image-group{
+       margin-left: 10px;
+        
+      }
+      
       .project-list1{
         display: flex;
         flex-direction: column;
@@ -309,9 +315,23 @@ h5:hover{
         
         
       }
-      .project-container div{
-        margin-left: 50px;
+      
+      .input-date{
+        width: 73%;
+        margin-left: 1px;
       }
+      .input-cekbox{
+        margin-left: 5px;
+       
+      }
+      .input-cekbox div{
+        margin-left: 5px;
+       
+      }
+      .input-project-image-group{
+        margin-left: 5px;
+      }
+      
 
       
       
@@ -488,6 +508,14 @@ h5:hover{
       }
       form div button{
         margin-left: 80%;
+      }
+      .input-date{
+        width: 28%;
+        margin-left: 1px;
+      }
+      .project-form{
+       margin-left: 25px;
+        margin-top: 80px;
       }
     
   }

@@ -4,10 +4,11 @@
     font-family: Arial, Helvetica, sans-serif;
 } */
 .project-form{
-    padding: 80px 0;
+    /* padding: 80px 0; */
     display: flex;
     justify-content: center;
     background: white;
+    margin-top: 80px;
    
    
 }
@@ -31,8 +32,8 @@
     margin-bottom: 18px;
     border-radius: 5px;
     background: lightgrey;
-    transition-duration: 0.2s;
-  transition-property: transform;
+    /* transition-duration: 0.2s;
+  transition-property: transform; */
 }
 .project-form form textarea{
     margin-bottom: 20px;
@@ -86,7 +87,7 @@
    
 }
 .project-form form .input-project-image-group{
-    width: 103%;
+    width: 100%;
     border: 1px solid black;
     border-radius: 5px;
     padding: 0px;
@@ -124,7 +125,8 @@
     display: flex;
     justify-content: end;
     align-items: center;
-    margin-left: 98%;
+    margin-right: 0px;
+    /* margin-left: 98%; */
    
     padding: 20px;
     
@@ -138,10 +140,10 @@
     border-radius: 5px;
     padding: 10px;
     cursor: pointer;
-    transition-duration: 0.2s;
-  transition-property: transform;
+    /* transition-duration: 0.2s;
+  transition-property: transform; */
 }
-.project-form form label{
+/* .project-form form label{
     transition-duration: 0.2s;
   transition-property: transform;
 }
@@ -149,15 +151,15 @@
     font-weight: bold;
     font-size: 25px;
     transform: scale(1.1);
-}
-.project-form form input:hover{
+} */
+/* .project-form form input:hover{
     box-shadow: 0px 0px 10px;
     transform: scale(1.1);
 }
 .project-form form textarea:hover{
     box-shadow: 0px 0px 10px;
     transform: scale(1.1);
-}
+} */
 .project-form form .input-project-image-group:hover{
     box-shadow: 0px 0px 10px;
 }
