@@ -46,7 +46,7 @@
 
 // variabel dataProject nya array of object
 let dataProject = []
-alert("gw ganteng tauu")
+// alert("gw ganteng tauu")
 
 // fungsi dari add projectnya
 function addProject(event) {
@@ -59,26 +59,28 @@ function addProject(event) {
     let description = document.getElementById("input-description").value;
     let image = document.getElementById("input-project-image").files;
 
+
+    // variabel untuk menghitung jarak dursi pda project
     let start = new Date(stardate)
     let end = new Date(enddate)
 
     let timeDistance = end - start
     console.log(timeDistance)
 
-    let distanceSecond = Math.floor(timeDistance / 1000)
+    let distanceSecond = Math.floor(timeDistance / 1000) 
     let distanceMinutes = Math.floor(distanceSecond / 60)
     let distanceHours = Math.floor(distanceMinutes / 60)
     let distanceDays = Math.floor(distanceHours / 24)
     let distanceWeeks = Math.floor(distanceDays / 7)
     let distanceMonths = Math.floor(distanceWeeks / 4)
     let distanceYears = Math.floor(distanceMonths / 12)
+    // floor -> 1.8 -> 1
+    // ceil -> 1.4 -> 2
+    // round -> 1.3 -> 1
 
     let distance = "";
 
-    // if (distanceSecond >= 60 ) {
-    //     distance=  `${distanceMinutes} menit`
-    // } else if (distanceMinutes  >= 60) {
-    //     distance= `${distanceHours} jam`
+    // kondision untuk jarak waktu project
     if (distanceDays < 7) {
         distance = distanceDays + "hari";
     } else if (distanceWeeks < 4) {
@@ -185,7 +187,7 @@ function addProject(event) {
 // fungsi untuk menampilkan data add project kita ke halaman html/html
 function renderProject() {
     document.getElementById("mockup").innerHTML = "";
-    
+    // fungsion render itu biar kita mnggil ulang data dari form project .
     // looping
     for (let index = 0; index < dataProject.length; index++) {
         document.getElementById("mockup").innerHTML += `
@@ -204,6 +206,7 @@ function renderProject() {
                         <h2>${dataProject[index].title}</h2>
                         <h6>${getFullTime(dataProject[index].postAt)}</h6>
                         <h5 class="project-items-duration">durasi : ${dataProject[index].distance}</h5>
+                        
                     </div>
                     <div class="project-list-paraf">
                         <p>${dataProject[index].description}</p>
@@ -230,7 +233,7 @@ function renderProject() {
     
 }
 
-// untuk menghitung jrak waktu pada project
+// untuk menghitung waktu  saat post project
 
 function getFullTime(time) {
     let bulan = ["Jan", "Feb","March", "Apr", "May", "Jun", "Jul", "Aug", "Sept","Oct", "Nov","Desc"];
@@ -238,14 +241,14 @@ function getFullTime(time) {
     let tanggal = time.getDate();
     let indexBulan = time.getMonth();
     let tahun = time.getFullYear();
-    let jam = time.getHours();
-    let menit = time.getMinutes();
+    let hours = time.getHours();
+    let minutes = time.getMinutes();
 
-    if (jam < 10) {
-        jam = "0" + jam
+    if (hours < 10) {
+        hours = "0" + hours
     }
-    if (menit < 10) {
-        menit = "0" + menit
+    if (minutes < 10) {
+        minutes = "0" + minutes
     }
 
     // if (tanggal <= 7) {
@@ -258,7 +261,9 @@ function getFullTime(time) {
     //     minggu = minggu[3];
     //   }
 
-      return `${tanggal} ${bulan[indexBulan]}  ${tahun} ${jam}:${menit} WIB`;
+      return `${tanggal} ${bulan[indexBulan]}  ${tahun} ${hours}:${minutes} WIB`;
     //   console.log(time);
  }
+
+
 

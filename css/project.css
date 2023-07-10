@@ -68,11 +68,22 @@
   } */
 .input-date{
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     width: 100%;
+   
 }
 .input-date .date-kanan{
-    margin-left: 100px;
+    /* margin-left: 100px; */
+    width: 100%;
+    flex: 50%;
+    margin-left: 30px;
+}
+.input-date .date-kiri{
+    /* margin-left: 100px; */
+    width: 100%;
+    flex: 50%;
+    margin-right: 30px;
+   
 }
 .project-form form .input-project-image-group{
     width: 103%;
@@ -157,6 +168,9 @@
    transform: scale(1.1);
 }
 /* project list nya nih */
+
+
+
 .project-list1{
    
     margin-top: 5px;
@@ -319,6 +333,9 @@
 }
 
 /* project-list-detail */
+
+
+
 
 .project-detail{
     display: flex; 

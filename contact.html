@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/contact.css">
     <title>CONTACT ME</title>
 </head>
@@ -15,18 +18,18 @@
             <ul>
                 <li>
                     <a href="https://id.wikipedia.org/wiki/Cinta">
-                        <img style="width: 40px; margin: 5px auto;" src="assets/images/love.jpg" alt="pdi.p">
+                        <img style="width: 40px; margin: 5px auto; object-fit: contain;" src="assets/images/love.jpg" alt="pdi.p">
                     </a>
                 </li>
-                <li>
+                <li class="items-collapse">
                     <a style="text-decoration: none;" href="index.html">HOME</a>
                 </li>
-                <li>
+                <li class="items-collapse">
                     <a style="text-decoration: none;" href="project.html">MY PROJECT</a>
                 </li>
             </ul>
         </div>
-        <div class="nav-kanan">
+        <div class="nav-kanan items-collapse">
             <ul>
                 <li>
                     <a href="contact.html" style="text-decoration: none; color: white; background-color: black; padding: 10px;">CONTACT ME</a>
@@ -34,7 +37,16 @@
             </ul>
     
         </div>
+        <div class="nav-kanan" id="barsmenu" onclick="openHamburger()">
+            <i class="fa-2x fa-solid fa-bars"></i>
+        </div>
     </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html">Home</a>
+        <a href="project.html">My Project</a>
+        <a href="contact.html"><button class="tombol">Contact</button></a>
+    </div>
    
     <form>
         <div>
@@ -72,7 +84,7 @@
         </div>
     </form>
     <script src="js/contact.js"></script>
-
+<script src="js/index.js"></script>
 </body>
 
 </html>

@@ -1,5 +1,6 @@
 alert("isi biar kita bisa call ing an")
 
+// function dan variabel dari data form contact
 function submitData() {
     let name = document.getElementById("input-name").value;
     let email = document.getElementById("input-email").value;
@@ -45,3 +46,6 @@ function submitData() {
     console.log(objecter)
 
 }
+//  latihan doankkk
+
+ 

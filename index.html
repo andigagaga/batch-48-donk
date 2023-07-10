@@ -19,15 +19,15 @@
                         <img style="width: 40px; margin: 5px auto; object-fit: contain;" src="assets/images/love.jpg" alt="pdi.p">
                     </a>
                 </li>
-                <li>
+                <li class="items-collapse">
                     <a style="text-decoration: none;" href="index.html">HOME</a>
                 </li>
-                <li>
+                <li class="items-collapse">
                     <a style="text-decoration: none;" href="project.html">MY PROJECT</a>
                 </li>
             </ul>
         </div>
-        <div class="nav-kanan">
+        <div class="nav-kanan items-collapse">
             <ul>
                 <li>
                     <a href="contact.html" style="text-decoration: none; color: white; background-color: black; padding: 10px;">CONTACT ME</a>
@@ -35,7 +35,17 @@
             </ul>
     
         </div>
+        <div class="nav-kanan" id="barsmenu" onclick="openHamburger()">
+            <i class="fa-2x fa-solid fa-bars"></i>
+        </div>
     </nav>
+
+    <div class="hamburger-nav-container" id="hamburger-nav-container">
+        <a href="index.html" class="hamburger-active">Home</a>
+        <a href="project.html">My Project</a>
+        <a href="contact.html"><button class="tombol">Contact</button></a>
+    </div>
+    
     <div class="card">
         <div class="kiri">
             <div class="desc">
@@ -75,7 +85,7 @@
                 
             </div>
         </div>
-        <div class="kanan">
+        <div class="kanan skills card-layout">
             <div class="image" style="box-shadow: 0px 0px 25px; display: flex; flex-direction: column;align-items: center; border: 1px solid grey; background: white; border-radius: 10px; box-shadow: 2px grey;">
                 <a href="https://id.wikipedia.org/wiki/Kucing">
                      <img src="assets/images/home.jpg" style=" text-align: center;width: 350px; height: 350px;">
@@ -85,11 +95,11 @@
                     <a href="assets/images/andi.jpg" style="text-decoration: none;">
                         <h5 style="color: lightseagreen; text-align: center; font-size: 25px; margin: 10px auto; font-weight: bold;">GUSWANDI</h5>
                     </a>
-                <p style="text-align: center; font-size: 15px; font-weight: bold;">FullStack DEVELOPER</p>
+                <p style="text-align: center; font-size: 15px; font-weight: bold; margin-top: 3px;">FullStack Developer</p>
             </div>
         </div>
 
     </div>
-    
+    <script src="js/index.js"></script>
 </body>
 </html>
