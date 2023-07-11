@@ -46,6 +46,9 @@ function submitData() {
     console.log(objecter)
 
 }
-//  latihan doankkk
+
+
+
+
 
  

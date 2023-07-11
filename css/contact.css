@@ -60,7 +60,7 @@ button {
 select:hover {
    
     box-shadow: 0px 0px 10px;
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
 }
 /* textarea:hover {
     color: chocolate;
@@ -73,6 +73,7 @@ select:hover {
 } */
 textarea:hover {
     background-color: white;
+    box-shadow: 0px 0px 10px;
 }
 button {
     margin-left: 475px;

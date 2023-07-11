@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Testimonial</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/contact.css">
-    <title>CONTACT ME</title>
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="stylesheet" href="css/testimonial.css"/>
 </head>
-
 <body>
     <nav>
         <div class="nav-kiri">
@@ -32,6 +30,7 @@
                 </li>
             </ul>
         </div>
+
         <div class="nav-kanan items-collapse">
             <ul>
                 <li>
@@ -51,45 +50,18 @@
         <a href="testimonial.html">Testimonials</a>
         <a href="contact.html"><button class="tombol">Contact</button></a>
     </div>
-   
-    <form>
-        <div>
-            <h1 style="text-align: center;">GET IN TOUCH</h1>
-        </div>
-        <div>
-            <label for="input-name">NAME</label>
-            <input id="input-name" type="text" required>
 
-        </div>
-        <div>
-            <label for="input-email">EMAIL</label>
-            <input id="input-email" type="email" required>
-        </div>
-        <div>
-            <label for="input-phone">YOUR PHONE</label>
-            <input id="input-phone" type="number" required>
-        </div>
-        <div class="subject">
-            <label for="input-subject">SUBJECT</label>
-            <select id="input-subject">
-                <option value="" hidden>SELECT</option>
-                <option>FULL STACK</option>
-                <option>FRONTEND</option>
-                <option>BACKEND</option>
-            </select>
-        </div>
-        <div>
-            <label for="input-message">MESSAGE</label>
-            <textarea id="input-message" rows="7" cols="15"></textarea>
-        </div>
-        
-        <div>
-            <button type="button" onclick="submitData()">SUBMIT</button>
-        </div>
-    </form>
-    <script src="js/contact.js"></script>
-<script src="js/index.js"></script>
-<script src="js/lthnOOP.js"></script>
+    <div class="container-testimonial">
+        <h1>😒My Testimonial😒</h1>
+    </div>
+    <section class="testimonials" id="testimonials">
+        <!-- <div class="testimonial">
+            <img class="profile-testimonial" src="assets/images/card1.jpg"/>
+            <p class="quote">Bapakmu yaaaaa yakub</p>
+            <p class="author">-GUSWANDI</p>
+        </div> -->
+    </section>
+    <script src="js/testimonial.js"></script>
+    <script src="js/index.js"></script>
 </body>
-
 </html>
