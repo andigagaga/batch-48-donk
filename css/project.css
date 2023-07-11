@@ -408,3 +408,24 @@
     
     
 }
+@media only screen and (max-width: 900px){
+    .project-container form{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 550px){
+    .project-container form{
+        width: 100%;
+    }
+  }
+
+  @media only screen and (max-width: 900px){
+    .project-list1{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 550px){
+    .project-list1{
+        width: 100%;
+    }
+  }

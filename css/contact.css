@@ -84,3 +84,13 @@ button:hover {
     background-color: chocolate;
     transform: scale(1.1);
 }
+@media only screen and (max-width: 900px){
+    .form{
+        width: 100%;
+    }
+  }
+  @media only screen and (max-width: 550px){
+    .form{
+        width: 100%;
+    }
+  }
