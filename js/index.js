@@ -1,4 +1,4 @@
-console.log("andi ganteng")
+// console.log("andi ganteng")
 
 let hamburgerIsOpen = false;
 // hamburgerIsOpen == false

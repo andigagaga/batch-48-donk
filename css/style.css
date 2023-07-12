@@ -242,7 +242,7 @@ h5:hover{
       
       
       .kiri {
-        margin-left: 75px;
+        margin-left: 120px;
       }
       .kiri div{
        justify-content: center;
@@ -291,6 +291,9 @@ h5:hover{
         width: 150%;
         margin: 10px;
       } 
+      .kanan{
+        margin-left: 75px;
+      }
       
       
 
